@@ -1,0 +1,67 @@
+cat inicio
+cd misterio
+grep PISTA ./cena-do-crime
+
+// suspeito é alto, pelo menos 1.83m
+// carteirinhas sem nome do AAA, Delta, biblioteca, museu de historia do bash
+// garçou disse que Annabel (loira, cabelo curto, sotaque NZ) saiu da cafeteria próximo a cena do crime logo antes dos tiros
+
+cd associacoes
+
+grep Annabel ./AAA
+grep Annabel ./Museu_da_historia_do_bash
+grep Annabel ./Delta_SkyMiles
+grep Annabel ./Biblioteca_da_Cidade
+
+// Annabel Church é membro apenas do AAA e do Museu
+
+cd ..
+grep Annabel ./pessoas
+
+// Annabel Church  F       38      Vila Buckingham, linha 179
+
+cd ruas 
+head -179 Vila_Buckingham
+
+// LEIA A ENTREVISTA #699607
+
+cd ..
+cd entrevistas
+cat entrevista-699607
+
+// Annabel Church entrevistada 14:04
+// Não viu o atirador e fugiu ao ouvir tiros
+// Viu um carro fugindo > Honda Azul > Placa inicio L337 e final 9
+
+cd ..
+grep L337 -A 5 automoveis
+
+// suspeitos: Erika Owens (rua tapelo, 98), Joe Germuska (rua plainfield, 275), Jeremy Bowers (Travessa Dunstable, linha 284), Jacqui Maher (Travessa Andover, linha 224)
+
+cd ruas
+
+head -98 Rua_Trapelo
+head -275 Rua_Plainfield
+head -284 Travessa_Dunstable
+head -224 Travessa_Andover
+
+// LEIA A ENTREVISTA #5455315
+// LEIA A ENTREVISTA #29741223
+// LEIA A ENTREVISTA #9620713
+// LEIA A ENTREVISTA #904020
+
+cd ..
+cd entrevistas
+
+cat entrevista-5455315 //erika owens é inocente
+cat entrevista-29741223 //joe germuska inocente
+cat entrevista-9620713 //jeremy bowers possível suspeito, casa vazia, viajando
+cat entrevista-904020 //Jacqui Maher inocente
+
+cd ..
+grep Jeremy AAA Biblioteca_da_Cidade Delta_SkyMiles Museu_da_Historia_do_Bash
+
+// Jeremy é associado a tudo que foi encontrado na cena do crime e é único dono do Honda Azul que não pode ser inocentado
+
+
+
