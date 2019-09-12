@@ -15,7 +15,6 @@ body {
 .topo input[type=text]{
     padding: 6px;
     margin-top: 8px;
-    font-size: 17px;
     border: none;
     width: 150px;
 }
@@ -52,7 +51,6 @@ body {
 
 .topo{
     position: sticky;
-    top: 0;
 }
 
 .topo ul {
@@ -76,11 +74,11 @@ body {
 }
 
 .topo li a:hover{
-    background-color: #434846;
+    background-color: #3B0C03;
 }
 
 .active {
-    background-color: #656e69;
+    background-color: #7C0E0C;
 }
 
 .topo .login {
@@ -120,9 +118,11 @@ body {
     background: #ccc;
 }
 
+
 /* -------------- MEIO -------------- */
 
 /* Index */
+
 
 #npc{
     width: 250px;
@@ -132,6 +132,7 @@ body {
 .meio img {
     position: relative;
     top: 50px;
+    left: 10px;
     width: 500px;
     height: 315px;
 }
@@ -139,7 +140,12 @@ body {
 .meio > div {
     position: absolute;
     display: inline-block;
-    padding: 100px 0px;
+    padding: 100px 20px;
+    width: 600px;
+}
+
+.meio > div p {
+    line-height: 30px;
 }
 
 /* Cardápio */
@@ -171,8 +177,8 @@ tr:nth-child(even){
 }
 
 .botao{
-    padding: 30px 447px 0;
     text-align: right;
+    padding: 10px 430px;
 }
 
 .button{
@@ -192,15 +198,24 @@ tr:nth-child(even){
     color: #EEEEEE;
 }
 
+/* Cadastrar */
+
+
+
 /* Colaboradores */
+
+
+/* ----------------- BAIXO ------------- */
 
 /* Rodapé */
 
 .rodape{
     position: fixed;
+    padding: 1px;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 40px;
     background-color:#333;
     text-align: center;
 }
