@@ -1,0 +1,206 @@
+body {
+    background: #1b1d1c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #9c9790;
+}
+
+/* -------------- BARRA DE MENU DO TOPO -------------- */
+
+/* Login */
+
+.topo .login{
+    float: right;
+}
+
+.topo input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 150px;
+}
+
+.topo input[type=password]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 150px;
+}
+
+.topo input:focus{
+    background-color: black;
+    color: white;
+}
+
+.topo .login button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topo .login button:hover {
+    background: #ccc;
+}
+
+/* Menu */
+
+.topo{
+    position: sticky;
+    top: 0;
+}
+
+.topo ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topo li {
+    float: left;
+}
+
+.topo li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topo li a:hover{
+    background-color: #434846;
+}
+
+.active {
+    background-color: #656e69;
+}
+
+.topo .login {
+    float: right;
+}
+
+.topo input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 100px;
+}
+
+.topo input[type=password]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 100px;
+}
+
+.topo .login button{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 16px;
+    background: #9c9790;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+}
+
+.topo .login .button:hover{
+    background: #ccc;
+}
+
+/* -------------- MEIO -------------- */
+
+/* Index */
+
+#npc{
+    width: 250px;
+    height: 380px;
+}
+
+.meio img {
+    position: relative;
+    top: 50px;
+    width: 500px;
+    height: 315px;
+}
+
+.meio > div {
+    position: absolute;
+    display: inline-block;
+    padding: 100px 0px;
+}
+
+/* Cardápio */
+
+.cardapio img{
+    width: 50px;
+    height: 50px;
+}
+
+.cardapio{
+    font-size: 13px;
+    display: inline-block;
+}
+
+th{
+    background-color: #656e69;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+td{
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: black;
+}
+
+.botao{
+    padding: 30px 447px 0;
+    text-align: right;
+}
+
+.button{
+    font: bold 15px Verdana;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.button:hover{
+    background-color: #333333;
+    color: #EEEEEE;
+}
+
+/* Colaboradores */
+
+/* Rodapé */
+
+.rodape{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#333;
+    text-align: center;
+}
