@@ -30,12 +30,6 @@ body {
       margin: 0 auto;
 }
 
-.menu::after {
-      content: "";
-      clear: both;
-      display: table;
-}
-
 h1 {
       color: #F12D3B;
       font-size: 48px;
@@ -46,10 +40,11 @@ h2 {
       font-size: 20px;
 }
 
-p {
+p, ul {
       color: #fff;
       font-size: 16px;
       font-weight: 300;
+      margin: 20px;
 }
 
 /* --------------- MENU --------------- */
@@ -70,9 +65,10 @@ nav img:hover{
       box-shadow: 0 0 50px white;
 }
 
-/* Joga o último icon do nav lá pra direita */
-nav a:last-child {
+/* Joga esses icons do nav lá pra direita */
+nav a#direita {
       float: right;
+      margin: 3px;
 }
 
 /* --------------- TEXTOS DE INTRO --------------- */
@@ -133,6 +129,20 @@ header p {
 
 /* --------------- FORMULÁRIO DE CONTATO --------------- */
 
+input {
+      padding: 2px 20px 0 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      display: inline-block;
+}
+
+/* Área da mensagem */
+
+textarea {
+      padding: 5px 20px 0 5px;
+      margin: 8px 0;
+      font-family: inherit;
+}
 
 
 /* --------------- RODAPÉ --------------- */
