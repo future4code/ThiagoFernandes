@@ -1,0 +1,149 @@
+/* --------- AJUSTANDO MARGENS --------- */
+* {
+      margin: 0;
+}
+
+/* --------- AJUSTES DE FONTE E PLANO DE FUNDO --------- */
+
+html {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+      width: 100%;
+      background-image: url(black3.jpg);
+      background-repeat: repeat;
+      color: white;
+}
+
+/* --------- AJUSTES DE FONTE E PLANO DE FUNDO --------- */
+
+/* Definindo o "wrapper" */
+.principal {
+      width: 90%;
+      margin: 0 auto;
+}
+
+h1 {
+      color: #F12D3B;
+      font-size: 48px;
+}
+
+h2 {
+      color: #F12D3B;
+      font-size: 20px;
+}
+
+p, ul {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+      margin: 20px;
+}
+
+/* --------------- MENU --------------- */
+
+/* Controlando a altura do nav e o espaço antes do texto */
+nav {
+      height: 70px;
+      line-height: 70px;
+}
+
+nav a img {
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+}
+
+nav img:hover{
+      box-shadow: 0 0 50px white;
+}
+
+/* Joga esses icons do nav lá pra direita */
+nav a#direita {
+      float: right;
+      margin: 3px;
+}
+
+/* --------------- TEXTOS DE INTRO --------------- */
+
+/* espaço entre o nav e o texto + 0 + espaço após o texto + chegar texto pra direita */
+header {
+      margin: 100px 0 50px 120px;
+}
+
+header p {
+      width: 60%;
+      margin-top: 10px;
+}
+
+/* --------------- PORTFÓLIO DE IMAGENS --------------- */
+
+/* cria um "wrapper" pras imagens */
+.trabalhos {
+      text-align: center;
+      width: 100%;
+}
+
+/* coloca uma margem entre as imagens e divide ela em blocos */
+.trabalhos img {
+      margin: 1%;
+      width: 25%;
+}
+
+.trabalhos img:hover{
+      box-shadow: 0 0 10px white;
+}
+
+/* --------------- TEXO DOS SITES --------------- */
+
+.txtSites {
+      margin: 130px 0 80px 40px;
+}
+
+.txtSites > p{
+      margin: 20px;
+}
+
+/* --------------- PORTFÓLIO DOS SITES --------------- */
+
+.imgSites {
+      width: 100%;
+      text-align: center;
+}
+
+.imgSites img {
+      margin: 1%;
+      width: 35%;
+}
+
+.imgSites img:hover{
+      box-shadow: 0 0 10px white;
+}
+
+/* --------------- FORMULÁRIO DE CONTATO --------------- */
+
+input {
+      padding: 2px 20px 0 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      display: inline-block;
+}
+
+/* Área da mensagem */
+
+textarea {
+      padding: 5px 20px 0 5px;
+      margin: 8px 0;
+      font-family: inherit;
+}
+
+
+/* --------------- RODAPÉ --------------- */
+
+footer p {
+      text-align: center;
+      color: grey;
+      margin: 60px auto;
+}
+
