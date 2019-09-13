@@ -1,11 +1,6 @@
 /* --------- AJUSTANDO MARGENS --------- */
 * {
       margin: 0;
-      padding: 0;
-      border: none;
-      outline: none;
-      vertical-align: baseline;
-      font-size: 100%;
 }
 
 /* --------- AJUSTES DE FONTE E PLANO DE FUNDO --------- */
@@ -19,7 +14,6 @@ body {
       background-image: url(black3.jpg);
       background-repeat: repeat;
       color: white;
-      /*background: #0E0E0E;      //Talvez usar essa cor no lugar da leve textura?   */
 }
 
 /* --------- AJUSTES DE FONTE E PLANO DE FUNDO --------- */
@@ -94,7 +88,7 @@ header p {
 /* coloca uma margem entre as imagens e divide ela em blocos */
 .trabalhos img {
       margin: 1%;
-      width: 45%;
+      width: 25%;
 }
 
 .trabalhos img:hover{
@@ -120,7 +114,7 @@ header p {
 
 .imgSites img {
       margin: 1%;
-      width: 94%;
+      width: 35%;
 }
 
 .imgSites img:hover{
