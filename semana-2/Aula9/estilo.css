@@ -1,0 +1,92 @@
+body{
+    background: #F9F9FA;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    background: #FDF9F3;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.devlogo{
+    height: 34px;
+    width: 51px;
+}
+
+.searchbar{
+    height: 30px;
+    width: 419px;
+}
+
+.escreverpost{
+    height: 26px;
+    width: 122px;
+}
+
+.telegram{
+    height: 29px;
+    width: 48px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 505px;
+    width: 25%;
+    border: 1px solid black;
+}
+
+P{
+    margin: auto 1px;
+}
+
+.data{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    background: red;
+    height: 10%;
+}
+
+.meiao{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.truemeio{
+    display: flex;
+    justify-content: space-between;
+}
+
+.direita{
+    width: 25%;
+    height: 230px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.post img{
+    width: 100%;
+    height: 90%;
+
+}
+
+.botao {
+    width: 80%;
+    align-self: center;
+}
+
+.join{
+    background: blue;
+    height: 15%;
+}
