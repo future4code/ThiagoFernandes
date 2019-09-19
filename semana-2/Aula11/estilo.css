@@ -3,9 +3,10 @@ body{
     padding: 0;
 }
 
-main{
+.main{
     position: relative;
-    min-height: 100vw;
+    display: flex;
+    min-height: 50vw;
 }
 
 header{
@@ -24,20 +25,46 @@ h2{
     margin-left: 10px;
 }
 
+.barra-lateral{
+    border-right: 1px solid black;
+}
+
+.barra-lateral ul{
+    list-style-type: none;
+    padding: 0 10px 0 10px;
+    line-height: 1.5;
+}
+
 .main-area{
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 50px;
     gap: 10px;
-    margin: 20px;
-    justify-content: center;
+    margin: 10px 10px 0 10px;
     align-items: center;
     padding-bottom: 3rem;
+    
+}
+
+.videos-recomendados{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px;
+    height: 100px;
+    width: 50%;
+}
+
+.img-resize{
+    width: 150px;
+    height: 100px;
 }
 
 .video-page{
     margin: 10px;
     height: auto;
+    max-width: 70%;
 }
 
 .video-page > h2{
@@ -58,6 +85,7 @@ video{
     border: 1px solid green;
     align-items: left;
     justify-items: center;
+    height: auto;
 }
 
 .video-area img{
@@ -70,9 +98,20 @@ video{
     margin-left: 10px;
 }
 
+.video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-curtir{
+    height: 30px;
+    width: 80px;
+}
+
+
 footer{
     background: #323B3E;
-    position: absolute;
     bottom: 0;
     margin: 0;
     padding: 0;
@@ -93,7 +132,7 @@ footer h1{
 }
 
 
-@media (max-width: 800px){
+@media (max-width: 500px){
 
     header{
         background: #EF843A;
@@ -109,7 +148,6 @@ footer h1{
     .main-area{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
     footer{
