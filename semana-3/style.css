@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    height: 40px;
+    background: gray;
+    justify-content: center;
+    align-items: center;
+}
+
+header > *{
+    margin-right: 20px;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.dia-semana{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.dia{
+    background: black;
+    color: white;
+    width: 10%;
+    height: 100px;
+}
+
+.tarefa{
+    background: lightgray;
+    color: black;
+    height: 100px;
+    width: 90%;
+}
+
