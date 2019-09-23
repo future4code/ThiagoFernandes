@@ -3,6 +3,7 @@ body{
     padding: 0;
 }
 
+/* -------------- HEADER --------------  */
 header{
     display: flex;
     height: 40px;
@@ -15,7 +16,7 @@ header > *{
     margin-right: 20px;
 }
 
-
+/* -------------- PLANNER -------------- */
 section{
     display: flex;
     flex-direction: column;
@@ -23,8 +24,9 @@ section{
 
 .dia-semana{
     display: flex;
-    border: 1px solid black;
+    align-items: center;
     width: 100%;
+    border: 1px solid gray;
 }
 
 .dia{
@@ -32,6 +34,8 @@ section{
     color: white;
     width: 10%;
     height: 100px;
+    text-align: center;
+    line-height: 6;
 }
 
 .tarefa{
@@ -40,4 +44,6 @@ section{
     height: 100px;
     width: 90%;
 }
+
+
 
