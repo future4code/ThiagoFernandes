@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------- HEADER --------------  */
+header{
+    display: flex;
+    height: 40px;
+    background: gray;
+    justify-content: center;
+    align-items: center;
+}
+
+header > *{
+    margin-right: 20px;
+}
+
+/* -------------- PLANNER -------------- */
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.dia-semana{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.dia{
+    background: black;
+    color: white;
+    width: 10%;
+    height: 100px;
+    text-align: center;
+    line-height: 6;
+}
+
+.tarefa{
+    background: lightgray;
+    color: black;
+    height: 100px;
+    width: 90%;
+}
+
+
+
