@@ -23,8 +23,9 @@ function newPost() {
 
     // LIMPAR INPUTS E TXTAREA DEPOIS DE ENVIAR
     // (ver pq não limpa todos os input com o queryselectorAll)
-    document.querySelector("input").value = "";
-    document.querySelector("textarea").value = "";
+    document.querySelector("#titulo").value = "";
+    document.querySelector("#autor").value = "";
+    document.querySelector("#conteudo").value = "";
 
     // JOGAR NOVO POST NAS DIVS CERTAS
     const novoTitulo = document.querySelector(".titulopost");
