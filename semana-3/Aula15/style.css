@@ -8,6 +8,7 @@ header{
   background: gray;
   display: flex;
   justify-content: center;
+  border: 1px solid red;
 }
 
 h1{
@@ -33,9 +34,12 @@ h1{
     margin-left: 10px;
   }
 
+  /* ------------ POSTS INSERIDOS PELO JS ------------ */
+
   .postagens{
     background: rgb(100, 100, 100);
     color: white;
+    border: 1px solid red;
   }
 
   .titulopost, .autorpost, .novoconteudo {
@@ -47,6 +51,7 @@ h1{
   .titulopost{
     font-weight: bold;
     font-size: 26px;
+    text-decoration: underline;
   }
 
   .autorpost{

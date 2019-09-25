@@ -8,7 +8,6 @@ class Post {
         this.autor = autor;
         this.conteudo = conteudo;
     }
-
 }
 
 // CRIAR NOVO POST, INSTACIANDO A CLASSE E ADICIONANDO AO ARRAY
@@ -22,10 +21,12 @@ function newPost() {
     listaDePosts.push(postagem);
     console.log(postagem);
 
+    // LIMPAR INPUTS E TXTAREA DEPOIS DE ENVIAR
+    // (ver pq não limpa todos os input com o queryselectorAll)
     document.querySelector("input").value = "";
     document.querySelector("textarea").value = "";
 
-    // JOGAR NOVO POST NA DIV CERTA
+    // JOGAR NOVO POST NAS DIVS CERTAS
     const novoTitulo = document.querySelector(".titulopost");
     const novoAutor = document.querySelector(".autorpost");
     const novoConteudo = document.querySelector(".novoconteudo");
