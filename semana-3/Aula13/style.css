@@ -45,5 +45,6 @@ section{
     width: 90%;
 }
 
-
-
+.tarefa-feita {
+    text-decoration: line-through;
+}

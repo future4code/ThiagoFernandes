@@ -10,6 +10,9 @@ function criarItem() {
     }
 
     let novaTarefa = document.createElement("li");
+    // risca a tarefa criada ao clicar
+    novaTarefa.onclick = riscaTarefa;
+
     let dia = document.getElementById("diaDaSemana").value
     let listaTarefas;
 
@@ -61,12 +64,19 @@ function criarItem() {
 
 }
 
-// FUNÇÃO PRA RISCAR ELEMENTO CLICADO (teoricamente, né)
+// FUNÇÃO PARA LIMPAR AS TAREFAS
+function apagarTarefa(){
+    const tarefas = document.querySelectorAll(".tarefa");
 
-// function riscarItem() {
+    for (let diaDaSemana of tarefas){
+        diaDaSemana.innerHTML = "";
+    }
 
-//     let item = document.querySelector("li");
-//     item.style.setProperty('text-decoration', 'line-through');
-    
-//   }
+}
+
+// FUNÇÃO PARA RISCAR A TAREFA (muda a classe delas)
+function riscaTarefa(event){
+    const riscar = event.target;
+    riscar.classList.toggle("tarefa-feita");
+}
 
