@@ -1,5 +1,6 @@
 body{
     display: flex;
+    background: lightgray;
 }
 
 section {
@@ -8,7 +9,7 @@ section {
     width: 25%;
     border: 1px solid black;
     margin: 10px;
-    border: 1px solid blue;
+    border-radius: 20px;
 }
 
 h1, h2{

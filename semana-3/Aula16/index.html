@@ -12,8 +12,7 @@
 <body>
 
     <section>
-        <h1>Controlador de Despesas</h1>
-        <h2>Cadastrar despesa</h2>
+        <h1>Cadastrar despesa</h1>
         <div class="valorDespesa">
             <label for valor>Valor</label>
             <input type="text" id="valorDespesa">
@@ -21,6 +20,7 @@
         <div class="tipoDespesa">
             <label for tipo>Tipo</label>
             <select id="tipoDespesa">
+                <option value=""></option>
                 <option value="Comida" id="comida">Comida</option>
                 <option value="Contas" id="contas">Contas</option>
                 <option value="Viagens" id="viagens">Viagens</option>
@@ -37,10 +37,11 @@
     </section>
 
     <section>
-        <h1>Despesas Detalhadas</h1>
+        <h1>Filtrar despesas</h1>
         <div class="tipoDespesa">
             <label for tipo>Tipo</label>
             <select id="filtroTipoDespesa">
+                <option value=""></option>
                 <option value="Comida">Comida</option>
                 <option value="Contas">Contas</option>
                 <option value="Viagens">Viagens</option>
@@ -56,17 +57,20 @@
         </div>
         <div class="btn">
             <button onclick="filtraDespesa()">Filtrar</button>
-            <button>Limpar</button>
+            <button onclick="limparCampos()">Limpar</button>
+        </div>
+        <hr>
+        <div class="exibirDespesas">
+
         </div>
     </section>
 
     <section>
-            <h1>Extrato</h1>
-            <h2>Valor Total</h2>
-            <div class="extrato">
-                
-            </div>
-        </section>
+        <h1>Extrato</h1>
+        <div class="extrato">
+
+        </div>
+    </section>
 
 </body>
 
