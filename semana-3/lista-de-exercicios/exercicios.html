@@ -199,8 +199,16 @@
 
         console.log(array);
 
-    }
+        let menor = array1[0];
 
+        // pega o menor numero, dps testo de novo e o segundoMenor tem que ser > menor && segMenor > array[i], i guess
+        for (let i in array) {
+            if (menor > array[i]) {
+                menor = array[i];
+            }
+        }
+
+    }
 
     /* --- [2] --- */
 
