@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +9,174 @@
 </head>
 
 <body>
-    
+
 </body>
 
 <script>
 
-// INTERPRETAÇÃO DE CÓDIGO
+    //////  INTERPRETAÇÃO DE CÓDIGO ////// 
 
-/*[1] -> A função converte um valor em dólar para um valor em real. Para isso, ela pega o valor em dólar informado na variável valorEmDolar e o
-valor informado pelo usuario por meio da janela pop-up, multiplica ambos e salva no formato "R$ + resultado".
+    /*
+    
+    [1] -> A função converte um valor em dólar para um valor em real. Para isso, ela pega o valor em dólar informado na variável valorEmDolar e o
+    valor informado pelo usuario por meio da janela pop-up, multiplica ambos e salva no formato "R$ + resultado".
+    
+    Ao imprimir a variável meuDinheiro, o resultado será "R$" seguido pelo valor de [100 * número informado pelo usuário por meio do prompt].
+    
+    -------
+    
+    [2] -> A função recebe duas entradas. Em seguida, ela checa o tipoDeInvestimento para ver se é Poupança, Renda Fixa, CDB ou Ações (se não for
+    nenhum desses casos, o usuário recebe um alerta de tipo de investimento incorreto). Em seguida, a variável valorApoisInvestimento é o resultado da
+    variável valor multiplicada por um número (que depende do tipoDeInvestimento escolhido).
+    
+    Imprimir novoMontante resulta em 165.
+    Imprimir segundoMontante resulta no alert "Tipo de investimento informado incorreto!".
+    
+    -------
+    
+    [3] -> São informados 3 arrays, sendo o "numeros" um array com 14 números e os arrays "array1" e "array2" inicialmente vazios.
+    
+    O loop for of vai checar cada número do array "numeros". Se o número for par, ele é adicionao ao array1 e, se for ímpar, vai para o array2.
+    
+    As três mensagens exibidas pelo console.log são: 
+    - "Quantidade total de números 14"
+    - "6"
+    - "8"
+    
+    -------
+    
+    [4] -> São informadas três variáveis: um array (numeros), uma variável com valor positivo/infinito (numero1) e uma variável com valor 0 (numero2).
+    
+    O for of percorre a array numeros e compara cada posição dela com os valores das variáveis numero1 e numero2.
+    Se o valor do numero[x] for menor que o numero1, então o numero1 assume o valor do numero[x].
+    Se o valor do numero[x] for maior que o numero2, então o numero2 assume o valor do numero[x].
+    
+    As mensagens exibidas pelo console.log são:
+    - "-10"
+    - "1590"
 
-Ao imprimir a variável meuDinheiro, o resultado será "R$" seguido pelo valor de [100 * número informado pelo usuário por meio do prompt].
-
--------
-
-[2] -> A função recebe duas entradas. Em seguida, ela checa o tipoDeInvestimento para ver se é Poupança, Renda Fixa, CDB ou Ações (se não for
-nenhum desses casos, o usuário recebe um alerta de tipo de investimento incorreto). Em seguida, a variável valorApoisInvestimento é o resultado da
-variável valor multiplicada por um número (que depende do tipoDeInvestimento escolhido).
-
-Imprimir novoMontante resulta em 165.
-Imprimir segundoMontante resulta no alert "Tipo de investimento informado incorreto!".
-
--------
-
-[3] -> São informados 3 arrays, sendo o "numeros" um array com 14 números e os arrays "array1" e "array2" inicialmente vazios.
-
-O loop for of vai checar cada número do array "numeros". Se o número for par, ele é adicionao ao array1 e, se for ímpar, vai para o array2.
-
-As três mensagens exibidas pelo console.log são: 
-- "Quantidade total de números 14"
-- "6"
-- "8"
-
--------
-
-[4] -> São informadas três variáveis: um array (numeros), uma variável com valor positivo/infinito (numero1) e uma variável com valor 0 (numero2).
-
-O for of percorre a array numeros e compara cada posição dela com os valores das variáveis numero1 e numero2.
-Se o valor do numero[x] for menor que o numero1, então o numero1 assume o valor do numero[x].
-Se o valor do numero[x] for maior que o numero2, então o numero2 assume o valor do numero[x].
-
-As mensagens exibidas pelo console.log são:
-- "-10"
-- "1590"
-
--------
-
-
-// LÓGICA DA PROGRAMAÇÃO
-
-[1] -> Algumas maneiras de percorre uma lista: for, forEach, push.
-
-Exemplo de uso:
-
-/* PUSH
-let cores = ["vermelho", "azul", "preto"];
-cores.push("rosa");
-
-/*FOREACH
-let numeros = [0, 1, 2, 3, 4, 5];
-let valorTotal = 0;
-
-function soma(numero){
-  valorTotal += numero;
-}
-
-numeros.forEach(soma);
-console.log(valorTotal);
-
--------
+    -------
 
 
+    //////  LÓGICA DA PROGRAMAÇÃO  ////// 
+
+    /* 
+    
+    [1] -> Algumas maneiras de percorre uma lista: for, forEach, push.
+    
+    Exemplo de uso: */
+
+    function exemploPush() {
+        let cores = ["vermelho", "azul", "preto"];
+        cores.push("rosa");
+        console.log(cores)
+    }
+
+    exemploPush();
+
+    function exemploForEach() {
+        let numeros = [0, 1, 2, 3, 4, 5];
+        let valorTotal = 0;
+
+        function soma(numero) {
+            valorTotal += numero;
+        }
+
+        numeros.forEach(soma);
+        console.log(valorTotal);
+    }
+
+    exemploForEach();
+
+    /* ------- 
+    
+    [2] ->  
+    
+    a) V && F && V = F
+    
+    b) (V && F) || F = F
+    
+    c) (F || V) && (F || V) = V
+    
+    d) !(V && F) || !(V && V) = V
+    
+    e) F && F || (V && V && V) = V
+    
+    -------
+    
+    [3] -> O código está errado por dois motivos:
+    
+    1) ele vai ficar preso num loop infinito onde i = 0.
+    2) ele vai mostrar mais de "n" números, porque causa do conector <=
+    
+    O correto seria:
+    
+    const quantidadeDeNumerosPares;
+    let i = 0;
+    while(i < quantidadeDeNumerosPares) {
+      console.log(i*2)
+      i++;
+    }
+    
+    -------
+    
+    [4] */
+
+    function classificaTriangulo(a, b, c) {
+
+        if (a == b && a == c) {
+            console.log("Equilátero");
+        } else if (a == b || a == c || b == c) {
+            console.log("Isósceles");
+        } else if (a != b && a != c && b != c) {
+            console.log("Escaleno");
+        }
+
+    }
+
+    /* ------- 
+    
+    [5] */
+
+    function testaNumero(num1, num2) {
+
+        num1 = 150;
+        num2 = 10;
+
+        let maior;
+
+        if (num1 > num2) {
+            maior = num1;
+            menor = num2;
+        } else {
+            maior = num2;
+            menor = num1;
+        }
+
+        console.log("O maior número é: " + maior);
+
+        if (num1 % num2 == 0) {
+            console.log(num1 + " é divisível por " + num2)
+        } else {
+            console.log(num1 + " não é divisível por " + num2)
+        }
+
+        if (num2 % num1 == 0) {
+            console.log(num2 + " é divisível por " + num1)
+        } else {
+            console.log(num2 + " não é divisível por " + num1)
+        }
+
+        console.log("A diferença entre eles é " + (maior / menor));
+
+    }
+
+    testaNumero();
 
 
+    /* ------- */
+
+    //////  FUNÇÕES ////// 
 
 
 
