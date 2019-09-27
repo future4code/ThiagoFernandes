@@ -215,7 +215,88 @@
 
     //////  OBJETOS ////// 
 
+    /* ------- 
     
+    [1] -> 
+    
+    Objeto é um tipo de dado usado pra agrupar outros dados/variáveis (podem ser outros objetos, arrays,funções, etc), de modo não ordenado.
+    Arrays são usados pra agrupar dados de modo ordenado e sequencial, geralmente usado pra modelar algum tipo de lista.
+
+    ------- 
+    
+    [2]*/
+
+    function criaRetangulo(lado1, lado2) {
+
+
+        let perimetro = 2 * (lado1 + lado2);
+        let area = lado1 * lado2;
+
+        const retangulo = {
+            lado1: lado1,
+            lado2: lado2,
+            perimetro: perimetro,
+            area: area
+        }
+
+        console.log(retangulo)
+
+    }
+
+    /* ------- 
+    
+    [3] 
+    
+    */
+
+    const filmeFavorito = {
+        titulo: "O Iluminado",
+        ano: 1980,
+        diretor: "Stanley Kubrick",
+        ator: "Jack Nicholson",
+        atriz: "Shelley Duvall"
+    }
+
+    console.log("Venha assistir ao filme " + filmeFavorito.titulo + ", de " + filmeFavorito.ano + ", dirigido por " + filmeFavorito.diretor + " e estrelado por " + filmeFavorito.ator + ", " + filmeFavorito.atriz)
+
+    /* ------- 
+    
+    [4] 
+
+    */
+
+
+    const pessoa = {
+        nome: "Thiago",
+        idade: 32,
+        email: "thiago@spellbook.com.br",
+        endereco: "RJ"
+    }
+
+    function anonimizarPessoa() {
+
+        const novaPessoa = {
+            nome: "Anônimo",
+            idade: pessoa.idade,
+            email: pessoa.email,
+            endereco: pessoa.endereco
+        }
+
+        return novaPessoa;
+        console.log(novaPessoa);
+
+    }
+
+    anonimizarPessoa();
+
+
+    //////  OBJETOS ////// 
+
+    /* ------- */
+
+
+
+
 
 
 
