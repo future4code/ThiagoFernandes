@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <h1>Cadastrar despesa</h1>
+        <div class="valorDespesa">
+            <label for valor>Valor</label>
+            <input type="text" id="valorDespesa">
+        </div>
+        <div class="tipoDespesa">
+            <label for tipo>Tipo</label>
+            <select id="tipoDespesa">
+                <option value=""></option>
+                <option value="Comida" id="comida">Comida</option>
+                <option value="Contas" id="contas">Contas</option>
+                <option value="Viagens" id="viagens">Viagens</option>
+            </select>
+        </div>
+        <div class="descricaoDespesa">
+            <label for descrição>Descrição</label>
+            <input type="text" id="descricaoDespesa">
+        </div>
+        <div class="btn">
+            <button onclick="novaDespesa()">Cadastrar</button>
+        </div>
+
+    </section>
+
+    <section>
+        <h1>Filtrar despesas</h1>
+        <div class="tipoDespesa">
+            <label for tipo>Tipo</label>
+            <select id="filtroTipoDespesa">
+                <option value=""></option>
+                <option value="Comida">Comida</option>
+                <option value="Contas">Contas</option>
+                <option value="Viagens">Viagens</option>
+            </select>
+        </div>
+        <div class="valorMinimo">
+            <label for descrição>Valor Mínimo</label>
+            <input type="text" id="valorMinimo">
+        </div>
+        <div class="valorMaximo">
+            <label for descrição>Valor Máximo</label>
+            <input type="text" id="valorMaximo">
+        </div>
+        <div class="btn">
+            <button onclick="filtraDespesa()">Filtrar</button>
+            <button onclick="limparCampos()">Limpar</button>
+        </div>
+        <hr>
+        <div class="exibirDespesas">
+
+        </div>
+    </section>
+
+    <section>
+        <h1>Extrato</h1>
+        <div class="extrato">
+
+        </div>
+    </section>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
