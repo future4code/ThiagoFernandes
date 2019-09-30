@@ -7,11 +7,11 @@ body{
   position: relative;
   display: flex;
   min-height: 50vw;
-  background: #80471F;
+  background: black;
 }
 
 header{
-  background: #EF843A;
+  background: #F05E23;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,10 +19,23 @@ header{
   border-bottom: 2px solid black;
 }
 
-#searchBar{
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoimg{
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+input[type=text]{
   margin: 1px;
   width: 500px;
   height: 25px;
+  background: white;
 }
 
 #searchBtn{
@@ -32,38 +45,54 @@ header{
 
 h1{
   margin: 10px;
+  color: white;
+  text-shadow: -4px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 h2{
   margin-left: 10px;
 }
 
+p{
+  margin: 5px;
+}
+
+h3{
+  color: white;
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 ul{
   width: 150px;
   margin: 10px;
-  height: 500px;
 }
 
 li{
   padding-left: 10px;
   margin: 10;
+  color: white;
 }
 
 a{
   text-decoration: none;
-  font-weight: bold;
+  
   color: inherit;
 }
 
 li:hover{
   color: black;
-  background: #FF9D57;
+  background: #F05E23;
+  font-weight: bold;
 
 }
 
 .barra-lateral{
-  border-right: 1px solid white;
-  background: #EF843A;
+  border-right: 1px solid gray;
+  background: rgb(50, 50, 50);
 }
 
 .barra-lateral ul{
@@ -81,7 +110,6 @@ li:hover{
   margin: 10px 10px 0 10px;
   align-items: center;
   padding-bottom: 3rem;
-  
 }
 
 .videos-recomendados{
@@ -115,23 +143,29 @@ video{
 }
 
 .video-area{
-  background: white;
+  background: black;
   height: 250px;
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
   align-items: left;
   justify-items: center;
   height: auto;
+  border-radius: 15px;
+}
+
+.video-area:hover{
+  border: 1px solid white;
 }
 
 .video-area img{
   width: 100%;
   height: 200px;
+  border-radius: 15px;
 }
 
 .video-area > p{
-  color: black;
+  color: white;
+  font-weight: bold;
   margin-left: 10px;
 }
 
@@ -145,7 +179,6 @@ video{
   height: 30px;
   width: 80px;
 }
-
 
 footer{
   background: #323B3E;
@@ -169,47 +202,3 @@ footer h1{
   bottom: 0;
 }
 
-
-@media (max-width: 500px){
-
-  header{
-      background: #EF843A;
-      display: flex;
-      justify-content: space-around;
-      width: 100vw;
-  }
-  
-  h1, input[type=text]{
-      margin: 10px;
-  }
-
-  .main-area{
-      display: grid;
-      grid-template-columns: 1fr;
-  }
-
-  footer{
-      background: #323B3E;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      height: 3rem;
-      margin: 0;
-  }
-
-  #video-footer{
-      position: absolute;
-  }
-
-  .video-page{
-      margin: 10px;
-      height: auto;
-      width: 90%;
-  }
-  
-  video{
-      width: 100%;
-  }
-  
-
-}
