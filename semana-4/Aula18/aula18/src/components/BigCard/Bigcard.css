@@ -1,0 +1,37 @@
+.bigCardWrapper{
+    border: 3px solid red;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    margin: 10px;
+}
+
+.bigCard{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+#nome{
+    font-weight: bold;
+    margin: 10px;
+    padding: 0;
+}
+
+#bio{
+    margin: 0 10px 10px 10px;
+    padding: 0;
+}
+
+#imgBio{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-left: 10px;
+}
