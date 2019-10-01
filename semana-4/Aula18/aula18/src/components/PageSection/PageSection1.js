@@ -12,7 +12,7 @@ export function PageSection(props) {
     )
 }
 
-PageSection.propTypes = {
-    imagem: PropTypes.string.isRequired,
-    texto: PropTypes.string.isRequired,
-}
+// PageSection.propTypes = {
+//     imagem: PropTypes.string.isRequired,
+//     texto: PropTypes.string.isRequired,
+// }

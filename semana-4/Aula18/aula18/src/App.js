@@ -50,14 +50,16 @@ function App() {
   return (
     <div className="App">
       <div className="pageSection">
-
+        
+        {/* Não entendi como usar o childrem, tentei mas foi fail */}
         <h1>Dados Pessoais</h1>
 
         <BigCard nome={bigcardpessoa.nome} foto={bigcardpessoa.foto} bio={bigcardpessoa.bio} />
         <SmallCard imagem={email1.imagem} card={email1.card} info={email1.info}  />
         <SmallCard imagem={endereco1.imagem} card={endereco1.card} info={endereco1.info}  />
         <ImageButton imagem={botaoVerMais.imagem} texto={botaoVerMais.texto} />
-
+      </div>
+      <div className="pageSection">
         <h1>Experiências Profissionais</h1>
 
         <BigCard nome={bigcardempresa1.nome} foto={bigcardempresa1.foto} bio={bigcardempresa1.bio} />

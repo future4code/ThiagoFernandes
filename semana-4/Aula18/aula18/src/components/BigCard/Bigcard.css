@@ -1,9 +1,10 @@
 .bigCardWrapper{
-    border: 3px solid red;
+    background: white;
     display: flex;
     align-items: center;
     width: 35%;
     margin: 10px;
+    box-shadow: -20px -10px 1px black;
 }
 
 .bigCard{
@@ -14,13 +15,15 @@
 
 p{
     margin: 0;
-    padding: 0;
 }
 
 #nome{
     font-weight: bold;
     margin: 10px;
     padding: 0;
+    background: black;
+    color: white;
+    padding: 10px;
 }
 
 #bio{
