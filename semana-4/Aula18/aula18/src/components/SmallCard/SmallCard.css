@@ -1,0 +1,22 @@
+.smallCard{
+    background: white;
+    width: 35%;
+    margin: 10px;
+    display: flex;
+    box-shadow: 20px 10px 1px black;
+}
+
+#icon{
+    margin: 10px;
+    margin-right: 0;
+}
+
+.info{
+    margin: 10px;
+    display: flex;
+}
+
+#emailendereco{
+    font-weight: bold;
+    margin-right: 5px;
+}

@@ -1,0 +1,6 @@
+.pageSection1{
+    border: 3px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
