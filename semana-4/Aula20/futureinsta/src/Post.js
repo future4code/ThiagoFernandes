@@ -3,7 +3,7 @@ import { PostHeader } from './PostHeader';
 import styled from 'styled-components';
 
 const PostContainer = styled.div`
-  border: 1px solid darkgray;
+  border: 1px solid #e6e6e6;
   width: 300px;
   margin: 10px 0;
 `
@@ -72,8 +72,7 @@ export class Post extends React.Component {
 
   render() {
 
-    let btncurtir
-
+    let btncurtir;
     if (this.state.curtiu) {
       btncurtir = "https://i.imgur.com/DXpbaoP.png"
     } else {
@@ -81,7 +80,6 @@ export class Post extends React.Component {
     }
 
     let comentarios;
-
     if (this.state.comentar) {
       comentarios = (<ComentarioContainer>
         <InputComentarioContainer placeholder="Escreva seu comentário..." />
@@ -91,11 +89,17 @@ export class Post extends React.Component {
     }
 
     return (
-      <PostContainer>
-        <PostHeader image={this.props.profilePicture} 
-        username={this.props.username} />
 
-        <ImgPostContainer src={this.props.image} alt="" />
+      <PostContainer>
+        <PostHeader 
+        profilePicture={this.props.profilePicture} 
+        username={this.props.username} 
+        />
+
+        <ImgPostContainer 
+        src={this.props.image} 
+        alt="" 
+        />
 
         <BtnPostContainer>
 
