@@ -1,99 +1,98 @@
-import React, { Component } from 'react'
-import TodoList from './TodoList'
-import TodoItems from './TodoItems'
+import React from 'react';
+import { Formulario } from './Formulario';
+import styled from 'styled-components';
 
-class App extends Component {
-  inputElement = React.createRef()
+
+const Principal = styled.div`
+  height: 90vh;
+  width: 800px;
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 5px;
+`
+const CaixaDeMensagens = styled.div`
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: darkblue;
+`
+const TextoNegrito = styled.span`
+  font-weight: bold;
+`
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+const MsgArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: white;
+  flex-wrap: wrap;
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 10px;
+  
+`
+const UsuarioIndiviual = styled.div`
+  margin: 0 10px 10px 10px;
+`
+
+
+
+class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      items: [],
-      currentItem: {
-        text: "",
-        key: "",
-        status: "",
-      },
+      mensagens: [],
+
     }
   }
 
-  // Deletar o item de acordo com a key passada - ok
-
-  // A ideia é mudar isso aqui pra um map (?), daí todo item deletado ganha o status OFF e todo item ativo ganha status ON
-  // Ao clicar, muda esse status de ON pra OFF
-  // Os itens ON são mostrados na toDo list e os itens OFF são monstrados na lista de tarefas concluídas
-  // Obviamente ainda não sei fazer, mas a ideia faz sentido, haha
-  deleteItem = key => {
-    const filteredItems = this.state.items.filter(item => {
-      return item.key !== key
-    })
-
+  // ------- Pegar a mensagem e colocar no array ------- //
+  addMsg = (mensagem) => {
     this.setState(
-      {
-      items: filteredItems,
-      }
+      { mensagens: [...this.state.mensagens, mensagem] }
     )
   }
 
-
-  // Salva o valor do input + uma maneira legal de lidar com a key ensinado pelo stackoverflow :)
-  handleInput = e => {
-    const itemText = e.target.value
-    const currentItem = { text: itemText, key: Date.now(), status: "on" }
-    this.setState({
-      currentItem,
-    })
-  }
-
-  addItem = e => {
-    const newItem = this.state.currentItem
-    if (newItem.text !== '') {
-      const items = [...this.state.items, newItem]
-      this.setState({
-        items: items,
-        currentItem: { text: "", key: "" },
-      })
-    }
-  }
-
-
-  // Evitar que a página recarregue + só adicionar tarefa se o input não for vazio + esvaziar input depois de enviar
-  addItem = e => {
-    e.preventDefault()
-    const newItem = this.state.currentItem
-
-    if (newItem.text !== '') {
-
-      const items = [...this.state.items, newItem]
-      console.log(items)
-
-      this.setState(
-        {
-        items: items,
-        currentItem: { text: "", key: "", status: "" },
-        }
-      )
-
-    }
-  }
 
   render() {
 
+    // ------- Criar a área onde será exibida a lista com todas ------- //
+    const listaDeMensagens = this.state.mensagens.map(
+      (mensagem, index) => {
+        return <MsgArea key={index}>
+          <UsuarioIndiviual>
+            {mensagem.msgusuario}
+          </UsuarioIndiviual>
+        </MsgArea>
+      }
+    )
+
     return (
 
-      <div className="App">
+      <Wrapper>
 
-        <TodoList
-          addItem={this.addItem}
-          inputElement={this.inputElement}
-          handleInput={this.handleInput}
-          currentItem={this.state.currentItem}
-        />
+        <Principal>
 
-        <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
+          <Formulario addMsg={this.addMsg} />
 
-      </div>
-    )
+          <CaixaDeMensagens>
+            <ul>
+              {listaDeMensagens}
+            </ul>
+          </CaixaDeMensagens>
+
+
+
+
+        </Principal>
+      </Wrapper>
+
+
+    );
   }
 }
 
-export default App
+export default App;
