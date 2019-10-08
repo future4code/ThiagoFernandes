@@ -17,9 +17,6 @@ const CaixaDeMensagens = styled.div`
   justify-content: flex-start;
   background: darkblue;
 `
-const TextoNegrito = styled.span`
-  font-weight: bold;
-`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -44,7 +41,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      mensagens: [],
+      tarefas: [],
 
     }
   }
@@ -52,7 +49,7 @@ class App extends React.Component {
   // ------- Pegar a mensagem e colocar no array ------- //
   addMsg = (mensagem) => {
     this.setState(
-      { mensagens: [...this.state.mensagens, mensagem] }
+      { tarefas: [...this.state.tarefas, mensagem] }
     )
   }
 
@@ -60,7 +57,7 @@ class App extends React.Component {
   render() {
 
     // ------- Criar a área onde será exibida a lista com todas ------- //
-    const listaDeMensagens = this.state.mensagens.map(
+    const listaDeMensagens = this.state.tarefas.map(
       (mensagem, index) => {
         return <MsgArea key={index}>
           <UsuarioIndiviual>

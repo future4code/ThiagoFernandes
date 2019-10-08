@@ -9,11 +9,6 @@ const ContainerMensagem = styled.div`
     align-items: center;
     border-radius: 5px;
 `
-
-const Usuario = styled.input`
-    margin-right: 10px;
-    width: 15%;
-`    
 const Mensagem = styled.input`
     margin-right: 10px;
     width: 70%;
