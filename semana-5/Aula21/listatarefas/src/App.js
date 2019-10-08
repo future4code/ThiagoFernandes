@@ -53,6 +53,19 @@ class App extends React.Component {
     )
   }
 
+  // ------- Teoricamente pega a tarefa  ------- //
+  deleteTask = (key) => {
+    const currentTasks = this.state.tarefas.filter(tarefa => {
+      return tarefa.key !== key
+    })
+
+    this.setState(
+      {
+      items: currentTasks,
+      }
+    )
+  }
+
 
   render() {
 
