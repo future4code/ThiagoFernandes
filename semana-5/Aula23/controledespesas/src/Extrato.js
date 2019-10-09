@@ -49,7 +49,7 @@ export class Extrato extends React.Component {
     render() {
         return (
             <Wrapper>
-                <TituloContainer><Titulo>Cadastrar Despesa</Titulo></TituloContainer>
+                <TituloContainer><Titulo>Total de Gastos</Titulo></TituloContainer>
                 <ContainerDespesas>
                     <div>
                         {this.props.despesas.map((despesa) =>
