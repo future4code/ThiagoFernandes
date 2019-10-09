@@ -36,6 +36,12 @@ const Input = styled.input`
     height: 20px;
     margin-bottom: 5px;
 `
+const Select = styled.select`
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 204px;
+    height: 30px;
+`
 const TituloContainer = styled.div`
     height: 70px;
     background: #41CBC7;
@@ -87,6 +93,8 @@ export class Cadastro extends React.Component {
         })
     }
 
+
+
     render() {
         return (
             <Wrapper>
@@ -101,27 +109,22 @@ export class Cadastro extends React.Component {
                             value={this.state.nome}
                             onChange={this.onChangeDespesa}
                         />
-
                         <Input
                             type="text"
                             placeholder="Valor..."
                             value={this.state.valor}
                             onChange={this.onChangeValor}
                         />
-
-                        <Input
-                            type="text"
-                            placeholder="Selecione o tipo..."
-                            value={this.state.tipo}
-                            onChange={this.onChangeTipo}
-                        />
+                        <Select onChange={this.onChangeTipo} value={this.state.tipo}>
+                            <option value="Comida" > Comida </option>
+                            <option value="Viagem"> Viagem </option>
+                            <option value="Contas"> Contas </option>
+                        </Select>
                     </InputWrapper>
-
                     <BtnWrapper>
                         <BtnCadastrar onClick={this.onRegister}>Cadastrar</BtnCadastrar>
                         <BtnExtrato>Ver Extrato</BtnExtrato>
                     </BtnWrapper>
-
                 </FormDespesa>
             </Wrapper>
         );

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 /////////////////////////////////////////////////////////////////////////////
 
+
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -24,12 +25,8 @@ export class App extends React.Component {
 
         < Cadastro addDespesa={this.addDespesa} />
 
-        < Extrato />
-
-        {
-          this.state.despesas.map((despesa, index) => <p key={index}>{despesa.nome} {despesa.valor} {despesa.tipo}</p>)
-        }
-        
+        < Extrato despesas={this.state.despesas} />
+          
       </div>
     );
   }
