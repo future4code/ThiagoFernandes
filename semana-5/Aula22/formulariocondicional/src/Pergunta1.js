@@ -26,31 +26,52 @@ const Pergunta1Btn = styled.button`
 /////////////////////////////////////////////////////////////////////////////////////
 
 export class Pergunta1 extends React.Component {
+    constructor(props) {
+        super(props)
+        this.nome = ""
+        this.idade = ""
+        this.email = ""
+        this.escolaridade = ""
+    }
+    
+    newName = (nome) => {this.nome = nome}
+    newAge = (idade) => {this.idade = idade}
+    newEmail = (email) => {this.email = email}
+    newStudy = (escolaridade) => {this.escolaridade = escolaridade}
 
+    onClickBtnContinue = () => {
+        this.props.onClickBtn({
+            nome: this.nome,
+            idade: this.idade,
+            email: this.email,
+            // ACHO que não ta pegando a escolaridade aqui? se eu mudar manualmente pra "Superior Completo" ela funciona, 
+            // mas se eu deixar o this.escolaridade ele não vai, wtf
+            escolaridade: this.escolaridade
+        })
 
+    }
 
-    onClickBtn = () => { }
 
     render = () => {
         return (
 
             <Etapa1Container>
-
                 <Titulo>VAMOS FALAR DE VOCÊ?</Titulo>
 
                 <Perguntas
+                    onChange={this.newName}
                     titulo={"Insira seu nome"}
                 />
-
                 <Perguntas
+                    onChange={this.newAge}
                     titulo={"Insira sua idade"}
                 />
-
                 <Perguntas
+                    onChange={this.newEmail}
                     titulo={"Insira seu email"}
                 />
-
                 <Perguntas
+                    onChange={this.newStudy}
                     titulo={"Qual a sua escolaridade?"}
                     tipo={"select"}
                     opcoes={
@@ -62,9 +83,7 @@ export class Pergunta1 extends React.Component {
                         ]
                     }
                 />
-
-                <Pergunta1Btn > Continuar </Pergunta1Btn>
-
+                <Pergunta1Btn onClick={this.onClickBtnContinue} >Continuar</Pergunta1Btn>
             </Etapa1Container>
 
         )

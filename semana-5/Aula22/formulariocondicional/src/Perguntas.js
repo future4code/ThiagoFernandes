@@ -34,34 +34,36 @@ export class Perguntas extends React.Component {
     }
   }
 
+  // Salvar resultado do input
+  onInput = (resposta) => {
+    this.setState({value: resposta.target.value});
+  }
 
   showQuestion = (titulo) => {
     return (
 
       <PerguntaContainer>
         <Texto>{titulo}</Texto>
-
-        <PerguntaInput />
-
+        <PerguntaInput onChange={this.onInput} />
       </PerguntaContainer>
 
     )
   }
+
 
   showSelector = (titulo, opcoes = []) => {
     return (
 
       <PerguntaContainer>
         <Texto>{titulo}</Texto>
-
-        <PerguntaSelect>
+        <PerguntaSelect onChange={this.onInput} >
+          
           {
             opcoes.map((opcao) => {
               return <option value={opcao}>{opcao}</option>
             })
           }
         </PerguntaSelect>
-
       </PerguntaContainer>
 
     )

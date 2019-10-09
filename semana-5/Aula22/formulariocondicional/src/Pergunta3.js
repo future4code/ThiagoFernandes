@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Perguntas } from './Perguntas'
 
-const Etapa3Container = styled.div`
-`
 
 const Titulo = styled.h2`
     background: white;
@@ -13,7 +11,7 @@ const Titulo = styled.h2`
     box-shadow: 2px 2px 1px darkred;
 `
 
-const Etapa3Botao = styled.button`
+const Pergunta3Btn = styled.button`
   border: 1px solid gray;
   border-radius: 5px;
   margin-top: 15px;
@@ -29,20 +27,33 @@ const Etapa3Botao = styled.button`
 export class Pergunta3 extends React.Component {
 
 
-    onClickBtn = () => { }
+    semFaculdade = (semFaculdade) => {this.semFaculdade = semFaculdade}
+    cursoExtra = (cursoComplementar) => {this.cursoComplementar = cursoComplementar}
+
+    onClickBtnContinue = () => {
+        if (this.props.onClickBtn) {
+            this.props.onClickBtn({
+                semFaculdade: this.semFaculdade,
+                cursoExtra: this.cursoExtra
+            })
+        }
+    }
+
 
     render = () => {
         return (
 
-            <Etapa3Container>
+            <div>
 
                 <Titulo>ME CONTA MAIS SOBRE...</Titulo>
 
                 <Perguntas
+                    onChange={this.semFaculdade}
                     titulo={"Por que não fez graduação?"}
                 />
 
                 <Perguntas
+                    onChange={this.cursoExtra}
                     titulo={"Você fez algum curso extracurricular?"}
                     tipo={"selecao"}
                     opcoes={
@@ -54,9 +65,9 @@ export class Pergunta3 extends React.Component {
                     }
                 />
 
-                <Etapa3Botao>Fim!</Etapa3Botao>
+                <Pergunta3Btn onClick={this.onClickBtnContinue}>Fim!</Pergunta3Btn>
 
-            </Etapa3Container>
+            </div>
 
         )
     }

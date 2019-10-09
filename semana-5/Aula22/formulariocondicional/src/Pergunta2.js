@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Perguntas } from './Perguntas'
 
-const Etapa2Container = styled.div`
+const Container = styled.div`
 `
 
 const Titulo = styled.h2`
@@ -13,7 +13,7 @@ const Titulo = styled.h2`
     box-shadow: 2px 2px 1px darkred;
 `
 
-const Etapa2Botao = styled.button `
+const Pergunta2Btn = styled.button`
   border: 1px solid gray;
   border-radius: 5px;
   margin-top: 15px;
@@ -29,22 +29,34 @@ const Etapa2Botao = styled.button `
 export class Pergunta2 extends React.Component {
 
 
-  onClickBtn = () => {}
+    newCurso = (curso) => {this.curso = curso}
+    newFaculdade = (faculdade) => {this.faculdade = faculdade}
 
-  render = () => {
-    return (
-      <Etapa2Container>
-        <Titulo>O QUE VOCÊ ESTUDA?</Titulo>
-        <Perguntas
-          titulo={"Qual curso?"}
-        />
-        
-        <Perguntas
-          titulo={"Onde você estuda/estudou?"}
-        />
-        
-        <Etapa2Botao> Finalizar </Etapa2Botao>
-      </Etapa2Container>
-    )
-  }
+    onClickBtnContinue = () => {
+        if (this.props.onClickBtn) {
+            this.props.onClickBtn({
+                curso: this.curso,
+                faculdade: this.faculdade
+            })
+        }
+    }
+
+    render = () => {
+        return (
+            <Container>
+                <Titulo>O QUE VOCÊ ESTUDA?</Titulo>
+                <Perguntas
+                    onChange={this.newCurso}
+                    titulo={"Qual curso?"}
+                />
+
+                <Perguntas
+                    onChange={this.newFaculdade}
+                    titulo={"Onde você estuda/estudou?"}
+                />
+
+                <Pergunta2Btn onClick={this.onClickBtnContinue}> Finalizar </Pergunta2Btn>
+            </Container>
+        )
+    }
 }
