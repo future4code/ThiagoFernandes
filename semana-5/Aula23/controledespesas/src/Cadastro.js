@@ -93,6 +93,10 @@ export class Cadastro extends React.Component {
         })
     }
 
+    onClickShowBills = () =>{
+        this.props.showExtrato()
+    }
+
 
 
     render() {
@@ -123,7 +127,7 @@ export class Cadastro extends React.Component {
                     </InputWrapper>
                     <BtnWrapper>
                         <BtnCadastrar onClick={this.onRegister}>Cadastrar</BtnCadastrar>
-                        <BtnExtrato>Ver Extrato</BtnExtrato>
+                        <BtnExtrato onClick={this.onClickShowBills}>Ver Extrato</BtnExtrato>
                     </BtnWrapper>
                 </FormDespesa>
             </Wrapper>

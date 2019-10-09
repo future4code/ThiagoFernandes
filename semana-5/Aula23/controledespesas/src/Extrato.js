@@ -51,15 +51,15 @@ export class Extrato extends React.Component {
             <Wrapper>
                 <TituloContainer><Titulo>Cadastrar Despesa</Titulo></TituloContainer>
                 <ContainerDespesas>
-                    <GastosWrapper>
-                        {this.props.despesas.map((despesa) => 
-                        <p>
-                            <GastosInfoIndividual><Negrito>Despesa: </Negrito>{despesa.nome}</GastosInfoIndividual>
-                            <GastosInfoIndividual><Negrito>Valor: </Negrito>{despesa.valor}</GastosInfoIndividual>
-                            <GastosInfoIndividual><Negrito>Tipo: </Negrito>{despesa.tipo}</GastosInfoIndividual>
-                            <hr />
-                        </p>)}
-                    </GastosWrapper>
+                    <div>
+                        {this.props.despesas.map((despesa) =>
+                            <GastosWrapper>
+                                <GastosInfoIndividual><Negrito>Despesa: </Negrito>{despesa.nome}</GastosInfoIndividual>
+                                <GastosInfoIndividual><Negrito>Valor: </Negrito>{despesa.valor}</GastosInfoIndividual>
+                                <GastosInfoIndividual><Negrito>Tipo: </Negrito>{despesa.tipo}</GastosInfoIndividual>
+                                <hr />
+                            </GastosWrapper>)}
+                    </div>
                 </ContainerDespesas>
             </Wrapper>
 
