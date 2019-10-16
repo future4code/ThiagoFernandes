@@ -31,9 +31,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       paginaAtual: "Cadastrar",
-      usuarios: [],
-      name: "",
-      email: ""
+      usuarios: []
     }
   }
 
@@ -78,6 +76,7 @@ class App extends React.Component {
       )
       .then((response) => {
         window.alert("Usuário criado!")
+        window.location.reload()
       })
       .catch((error) => {
         window.alert("Mais um erro meu deusssss")

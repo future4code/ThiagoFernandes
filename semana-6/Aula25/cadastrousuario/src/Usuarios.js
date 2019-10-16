@@ -28,6 +28,18 @@ const BtnDeleteUser = styled.button`
 `
 const NomeUsuario = styled.div`
 `
+const Titulo = styled.div`
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  color: white;
+  background: darkblue;
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+`
 ////////////////////////////////////////////////////////////////////////////////////
 
 export class Usuarios extends React.Component {
@@ -41,20 +53,20 @@ export class Usuarios extends React.Component {
     return (
 
       <WrapperComponente>
-        <h3>Usuários Cadastrados:</h3>
+        <Titulo>Usuários Cadastrados:</Titulo>
 
         <WrapperUsuarios>
-
-
-
           {this.props.usuarios.map(usuario => (
 
             <Usuario key={usuario.id}>
+
               <NomeUsuario>{usuario.name}</NomeUsuario>
+              
               <BtnDeleteUser
                 onClick={() => this.props.deletaUsuarios(usuario.id)}>
                 Excluir
             </BtnDeleteUser>
+
             </Usuario>
 
           ))}

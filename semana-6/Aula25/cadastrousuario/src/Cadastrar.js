@@ -7,9 +7,6 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 10px;
 `
-const WrapperName = styled.div`
-
-`
 const InputName = styled.input`
   border: none;
   border-bottom: 1px solid gray;
@@ -41,6 +38,17 @@ const BtnCadastrar = styled.button`
     background: green;
   }
 `
+const Titulo = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  color: white;
+  background: darkblue;
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+`
 ////////////////////////////////////////////////////////////////////////////////////
 
 export class Cadastrar extends React.Component {
@@ -53,11 +61,11 @@ export class Cadastrar extends React.Component {
   }
 
   salvaNome = (event) => {
-    this.setState({name: event.target.value})
+    this.setState({ name: event.target.value })
   }
 
   salvaEmail = (event) => {
-    this.setState({email: event.target.value})
+    this.setState({ email: event.target.value })
   }
 
   novoUsuario = () => {
@@ -71,25 +79,21 @@ export class Cadastrar extends React.Component {
 
       <Wrapper>
 
-        <h3>Novo Usuário</h3>
+        <Titulo>Novo Usuário</Titulo>
 
-        <WrapperName>
-          <InputName 
+        <InputName
           type="text"
           placeholder="Nome"
           value={this.state.name}
           onChange={this.salvaNome}
-          />
-        </WrapperName>
+        />
 
-        <div>
-          <InputEmail 
+        <InputEmail
           type="text"
           placeholder="E-mail"
           value={this.state.email}
           onChange={this.salvaEmail}
-          />
-        </div>
+        />
 
         <BtnCadastrar onClick={this.novoUsuario}>Cadastrar</BtnCadastrar>
 
