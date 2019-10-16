@@ -4,8 +4,25 @@ import { Cadastrar } from "./Cadastrar"
 import { Usuarios } from "./Usuarios"
 import axios from "axios"
 
+const WrapperPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 const PaginaAtual = styled.div`
   display: flex;
+`
+const BtnUsuarioCadastrado = styled.button`
+  background: #6DABE4;
+  border: none;
+  width: 210px;
+  height: 30px;
+  font-weight: bold;
+  color: white;
+
+  :hover{
+    background: darkblue;
+  }
 `
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -35,7 +52,6 @@ class App extends React.Component {
         console.log("usuarios buscados com sucesso")
       })
       .catch((error) => {
-        //retornando users not found
         console.log("erro no buscar usuarios")
       })
   }
@@ -68,10 +84,28 @@ class App extends React.Component {
       })
   }
 
+  deletaUsuarios = (userId) => {
+    axios
+      .delete(
+        `https://us-central1-future4-users.cloudfunctions.net/api/users/deleteUser?id=${userId}` ,
+        {
+          headers: {
+            "api-token": "7a175c559832cbe6db0112d56e63da03"
+          }
+        }
+      )
+      .then((response) => {
+        window.alert("Usuário deletado!")
+        window.location.reload()
+      })
+      .catch((error) => {
+        window.alert("Erro ao deletar grrrrr")
+      })
+  }
+
   mudaPagina = () => {
     const paginaAtual = this.state.paginaAtual;
     paginaAtual === "Cadastrar" ? this.setState({ paginaAtual: "Usuarios" }) : this.setState({ paginaAtual: "Cadastrar" })
-    console.log("botão muda pagina")
   }
 
   render() {
@@ -82,26 +116,26 @@ class App extends React.Component {
     // Botão pra ir/voltar pra pagina inicial e cadastros
     const textoBtn = (
       paginaAtual === "Cadastrar" ?
-        "Usuários Cadastrados" : "Tela de Cadastro"
+        "Usuários Cadastrados" : "Voltar"
     )
 
     // Pagina a ser exibida no momento, a depender do botão
     const paginalAtual =
       paginaAtual === "Cadastrar" ?
-        (<Cadastrar criarUsuarios={this.criarUsuarios} />) : (<Usuarios usuarios={usuarios} />)
+        (<Cadastrar criarUsuarios={this.criarUsuarios} />) : (<Usuarios deletaUsuarios={this.deletaUsuarios} usuarios={usuarios} />)
 
 
     return (
 
-      <div className="App">
-
-        <button onClick={this.mudaPagina}>
-          {textoBtn}
-        </button>
+      <WrapperPage>
 
         <PaginaAtual>{paginalAtual}</PaginaAtual>
 
-      </div>
+        <BtnUsuarioCadastrado onClick={this.mudaPagina}>
+          {textoBtn}
+        </BtnUsuarioCadastrado>
+
+      </WrapperPage>
     );
   }
 }
