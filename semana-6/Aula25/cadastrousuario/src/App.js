@@ -84,6 +84,7 @@ class App extends React.Component {
   }
 
   deletaUsuarios = (userId) => {
+    if (window.confirm("Tem certeza que deseja deletar?")){
     axios
       .delete(
         `https://us-central1-future4-users.cloudfunctions.net/api/users/deleteUser?id=${userId}` ,
@@ -100,6 +101,7 @@ class App extends React.Component {
       .catch((error) => {
         window.alert("Erro ao deletar grrrrr")
       })
+    }
   }
 
   mudaPagina = () => {
