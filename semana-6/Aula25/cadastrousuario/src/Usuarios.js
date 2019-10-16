@@ -26,15 +26,11 @@ export class Usuarios extends React.Component {
         {this.props.usuarios.map(usuario => (
 
           <Usuario>
-
-            {usuario.nome}{" "}
-
+            {usuario.nome}
             <button>
               Excluir
             </button>
-
           </Usuario>
-
         ))}
 
       </TodosUsuarios>
