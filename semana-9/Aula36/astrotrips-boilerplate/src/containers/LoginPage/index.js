@@ -14,6 +14,10 @@ const LoginWrapper = styled.form`
   display: grid;
 `;
 
+const BtnArea = styled.div`
+  display: flex;
+`
+
 class LoginPage extends Component {
   constructor(props) {
     super(props);
@@ -48,10 +52,14 @@ class LoginPage extends Component {
           label="Password"
           value={password}
         />
-        <Button>Login</Button>
+        <BtnArea>
+          <Button>Enviar</Button>
+          <Button>Voltar</Button>
+        </BtnArea>
       </LoginWrapper>
     );
   }
+
 }
 
 export default LoginPage;
