@@ -33,6 +33,12 @@ class LoginPage extends Component {
     });
   };
 
+  mapDispatchToProps(dispatch) {
+    return {
+      goToHomePage: () => dispatch(push("/HomePage"))
+    };
+  }
+
   render() {
     const { email, password } = this.state;
 
@@ -54,12 +60,12 @@ class LoginPage extends Component {
         />
         <BtnArea>
           <Button>Enviar</Button>
-          <Button>Voltar</Button>
+          <Button onClick={this.goToHomePage}>Voltar</Button>
         </BtnArea>
       </LoginWrapper>
     );
   }
-
 }
 
-export default LoginPage;
+export default connect(
+)(LoginPage);
