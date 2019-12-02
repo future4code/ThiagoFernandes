@@ -4,7 +4,7 @@
   "description": "Exercício 2",
   "main": "ex2.js",
   "scripts": {
-    "test": "start"
+    "start": "node ex2.js"
   },
   "author": "Thi",
   "license": "ISC"
