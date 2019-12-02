@@ -1,0 +1,11 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "Exercício 1",
+  "main": "ex1.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Thi",
+  "license": "ISC"
+}
