@@ -1,0 +1,11 @@
+{
+  "name": "ex2",
+  "version": "1.0.0",
+  "description": "Exercício 2",
+  "main": "ex2.js",
+  "scripts": {
+    "start": "node ex2.js"
+  },
+  "author": "Thi",
+  "license": "ISC"
+}
