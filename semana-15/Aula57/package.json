@@ -8,7 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cashier": "tsc && node build/cashier.js",
+    "dessert": "tsc && node build/dessert.js",
+    "menu": "tsc && node build/menu.js"
   },
   "author": "Thi",
   "license": "ISC"

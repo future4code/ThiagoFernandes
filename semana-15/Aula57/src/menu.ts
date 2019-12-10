@@ -1,4 +1,4 @@
-import { guacamole, feijoada } from './saltydish';
-import { brigadeiro, biscoito } from './dessert';
+import { SaltyDish } from './saltydish';
+import { Dessert } from './dessert';
 
-export const menu = { brigadeiro, biscoito, guacamole, feijoada }
+export const menu: string[] = [] 
