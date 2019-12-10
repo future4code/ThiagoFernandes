@@ -21,4 +21,8 @@ export abstract class Dish {
   }
 
   public abstract cook(): void;
+
+  public getPrice(): number{
+    return this.price;
+  }
 }

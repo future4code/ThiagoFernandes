@@ -1,4 +1,3 @@
-import { SaltyDish } from './saltydish';
-import { Dessert } from './dessert';
+import { Dish } from "./dish"
 
-export const menu: string[] = [] 
+export const menu: Dish[] = [];

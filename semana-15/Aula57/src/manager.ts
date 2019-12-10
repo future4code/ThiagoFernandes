@@ -1,7 +1,6 @@
 import { Cashier } from './cashier';
 
 export class Manager extends Cashier {
-  //TODO: descobrir onde é o certo pra iniciar a comanda: string[]
   constructor(
     nome: string,
     salario: number,
@@ -12,6 +11,3 @@ export class Manager extends Cashier {
 
 
 }
-
-export const Chefe = new Cashier("Jonas", 1500, "Gerente");
-console.log(Chefe);
