@@ -15,8 +15,8 @@ export class SaltyDish extends Dish {
   }
 }
 
-const feijoada = new SaltyDish(100, 20, ["leite condensado"], 100);
+export const feijoada = new SaltyDish(100, 20, ["leite condensado"], 100);
 console.log(feijoada.getProfit());
 
-const guacamole = new SaltyDish(50, 10, ["abacate"], 100);
+export const guacamole = new SaltyDish(50, 10, ["abacate"], 100);
 console.log(guacamole.getProfit());
