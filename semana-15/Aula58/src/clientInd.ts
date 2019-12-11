@@ -7,7 +7,7 @@ export class clientCom extends Residence implements Client {
     consumedEnergy: number = this.consumed;
   
     calculateBill(): number{
-        const bill: number = this.consumedEnergy * 0.75
+        const bill: number = this.consumedEnergy * 0.45
         return bill;
     };
     
@@ -23,6 +23,6 @@ export class clientCom extends Residence implements Client {
     }
   }
 
-  const Joao = new clientCom("João", "123456", "11798609770", 500, 1);
+  const Joao = new clientCom("Client Industrial", "123456", "11798609770", 500, 1);
   console.log(Joao.calculateBill());
   
