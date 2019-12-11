@@ -1,0 +1,16 @@
+{
+  "name": "aula55",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^12.12.14",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "tarefas": "tsc && node build/tarefas.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}
