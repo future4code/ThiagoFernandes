@@ -1,0 +1,15 @@
+{
+  "name": "contadeluz",
+  "version": "1.0.0",
+  "description": "Aula 57",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "clientRes": "tsc && node build/clientRes.js"
+  },
+  "author": "Thi",
+  "license": "ISC"
+}
