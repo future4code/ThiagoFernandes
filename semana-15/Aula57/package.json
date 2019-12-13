@@ -1,0 +1,17 @@
+{
+  "name": "restaurante",
+  "version": "1.0.0",
+  "description": "Aula 57",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cashier": "tsc && node build/cashier.js",
+    "dessert": "tsc && node build/dessert.js",
+    "menu": "tsc && node build/menu.js"
+  },
+  "author": "Thi",
+  "license": "ISC"
+}
