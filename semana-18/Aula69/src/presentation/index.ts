@@ -3,9 +3,11 @@ import express, { Request, Response } from 'express'
 
 
 const app = express()
-app.use(express.json()) // Linha mágica (middleware)
+app.use(express.json())
+
 app.post("/signup", nomeDoEndPoint);
 app.post("/login", nomeDoEndPoint);
 app.get("/myInfo", nomeDoEndPoint);
 app.post("/changePassword", nomeDoEndPoint);
+
 export default app 
