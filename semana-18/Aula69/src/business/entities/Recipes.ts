@@ -11,19 +11,19 @@ export class Recipes {
     }
 
     public getId() {
-        return this.id;
+        return this.id
     }
     public getTitle() {
-        return this.title;
+        return this.title
     }
     public getDescription() {
-        return this.description;
+        return this.description
     }
     public getCreationDate() {
-        return this.creationDate;
+        return this.creationDate
     }
     public getOwnerId() {
-        return this.ownerID;
+        return this.ownerID
     }
-    
+
 } 

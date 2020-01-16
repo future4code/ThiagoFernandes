@@ -5,9 +5,9 @@ import express, { Request, Response } from 'express'
 const app = express()
 app.use(express.json())
 
-app.post("/signup", nomeDoEndPoint);
-app.post("/login", nomeDoEndPoint);
-app.get("/myInfo", nomeDoEndPoint);
-app.post("/changePassword", nomeDoEndPoint);
+app.post("/signup", nomeDoEndPoint)
+app.post("/login", nomeDoEndPoint)
+app.get("/myInfo", nomeDoEndPoint)
+app.post("/changePassword", nomeDoEndPoint)
 
 export default app 

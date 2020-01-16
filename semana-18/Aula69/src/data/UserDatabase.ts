@@ -1,10 +1,9 @@
-import { User } from './../business/entities/User';
-import { UserGateway } from './../business/gateway/UserGateway';
+import { User } from './../business/entities/User'
+import { UserGateway } from './../business/gateway/UserGateway'
 import knex from 'knex'
 
-expor class UserDatabase implements UserGateway{
+export class UserDatabase implements UserGateway{
 
-    //TODO: criar essa classe
     private connection: knex;
 
     constructor() {
@@ -29,27 +28,27 @@ expor class UserDatabase implements UserGateway{
                 }
             );
         } catch (err) {
-           throw new Error("Falha ao cadastrar novo usuário :(");
+           throw new Error("Falha ao cadastrar novo usuário :(")
         }
     }
 
     async getUserEmail(email: string): Promise<User> {
         const result = await this.connection.raw(`
-        SELECT * FROM nomeDaTabela WHERE email = "${email}";
+            SELECT * FROM nomeDaTabela WHERE email = "${email}"
         `);
         const user = result[0][0];
-        return new User(user.id, user.email, user.Password);
+        return new User(user.id, user.email, user.Password)
     }
 
     async getUserId(id: string): Promise<User> {
         const result = await this.connection.raw(`
-        SELECT * FROM nomeDaTabela WHERE id = "${id}";
+            SELECT * FROM nomeDaTabela WHERE id = "${id}"
         `);
         const user = result[0][0];
-        return new User(user.id, user.email, user.Password);
+        return new User(user.id, user.email, user.Password)
     }
 
-
+    //TODO falta o updatepassword
 
 
 

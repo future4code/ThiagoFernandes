@@ -1,9 +1,12 @@
 export class User {
+
     constructor(
         private id: string,
         private email: string,
         private password: string
-    ) {}
+    ) {
+
+    }
 
     public getId() {
         return this.id;
@@ -16,4 +19,5 @@ export class User {
     public getPassword() {
         return this.password;
     }
+    
 } 
