@@ -4,7 +4,7 @@ import { CryptographyGateway } from './../gateways/crypt/CryptoGateway'
 import { IdGeneratorGateway } from './../gateways/auth/IdGeneratorGateway'
 import { UserTokenGateway } from './../gateways/auth/UserTokenGateway'
 
-export class CreateUserUseCase{
+export class CreateUser {
 
     constructor(
         private userGateway: UserGateway,
@@ -37,7 +37,7 @@ export class CreateUserUseCase{
             token: this.userTokenGateway.generateToken(user.getId()),
             message: "Usuário criado!"
         }
-        
+
     }
 }
 
