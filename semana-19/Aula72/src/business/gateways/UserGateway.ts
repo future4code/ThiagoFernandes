@@ -7,7 +7,5 @@ export interface UserGateway {
     getAllUsers(): Promise <User[]>
     createUser(user: User): Promise <void>
     verifyUserExist(id: string): Promise <boolean>
-    createUserRelation(followerId: string, followedId: string): Promise <void>
-    deleteUserRelation(followerId: string, followedId: string): Promise <void>
 
 } 
