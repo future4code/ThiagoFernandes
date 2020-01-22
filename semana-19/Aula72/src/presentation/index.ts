@@ -35,4 +35,47 @@ app.post("/signup", async (req: Request, res: Response) => {
 
 })
 
+app.post("/login", async (req: Request, res: Response) => {
+
+    try {
+
+        const loginUseCase = new Login (
+            new UsersDatabase(),
+            new BcryptService(),
+            new JwtAuthService()
+        )
+
+        const result = await loginUseCase.execute({
+            email: req.body.email,
+            password: req.body.password
+        })
+
+        res.send(result)
+
+    } catch(err) {
+        res.status(400).send({
+            erroMessage: err.message
+        })
+    }
+
+})
+
+app.get("/getAllUsers", async (req: Request, res: Response) => {
+
+    try {
+
+        const getAllUsersUC = new GetAllUsers (new UsersDatabase())
+        const result = await getAllUsersUC.execute()
+        res.status(200).send(result)
+
+    } catch (err) {
+        res.status(400).send({
+            errorMessage: err.message
+        })
+    }
+    
+})
+
+
+
 export default app
