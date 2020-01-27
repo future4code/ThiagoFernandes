@@ -1,0 +1,72 @@
+1.a) 
+select nome, salario from funcionarios 
+where (genero="F") and (salario > 2000);
+
+1.b) 
+SELECT nome, data_contratacao
+FROM exercicios.funcionarios
+WHERE local_de_trabalho="salao" and year(data_contratacao)>2004;
+
+1.c)
+SELECT nome, data_nascimento
+FROM exercicios.funcionarios
+where nome like "%ei%";
+
+1.d)
+SELECT nome, salario, data_nascimento AS Idade
+FROM exercicios.funcionarios
+where salario > 1300 and year(data_nascimento) > 1998;
+
+1.x)
+
+CREATE TABLE funcionarios(
+id int(11) PRIMARY KEY,
+nome varchar(100) NOT NULL,
+salario double NOT NULL,
+local_de_trabalho varchar(100) NOT NULL,
+genero varchar(1) NOT NULL,
+data_nascimento date NOT NULL,
+data_contratacao date NOT NULL
+);
+
+INSERT INTO funcionarios (id, nome, salario, local_de_trabalho, genero, data_nascimento, data_contratacao)
+VALUES (1, "Thiago", 3500, "Development", "M", '1987-03-06', '2020-04-01');
+
+2.a)
+select primeiro_nome, email from correntistas
+WHERE conta_corrente < 0;
+
+2.b)
+select primeiro_nome, genero from correntistas
+WHERE pais="Peru" || year(aniversario) < 1990;
+
+2.c)
+select ultimo_nome from correntistas
+WHERE primeiro_nome LIKE "A%";
+
+2.d)
+select primeiro_nome, aniversario from correntistas
+WHERE conta_corrente > 1000 AND year(aniversario) > 2000;
+
+2.x)
+CREATE TABLE correntistas(
+id int(11) PRIMARY KEY,
+primeiro_nome varchar(50),
+ultimo_nome varchar(50),
+email varchar(50),
+genero varchar(50),
+conta_corrente double NOT NULL,
+pais varchar(50),
+aniversario date
+);
+
+INSERT INTO correntistas (id, primeiro_nome, ultimo_nome, email, genero, conta_corrente, pais, aniversario)
+VALUES (1, "Thiago", "Fernandes", "thiago@spellbook.com.br", "Masculino", 10000, "Brasil", '1987-03-06'),
+(2, "Mariana", "Muniz", "mari@123.com", "Feminino", 5500, "Brasil", '2000-03-06'),
+(3, "Anon", "Nona", "anon@123.com", "Feminino", 300, "Brasil", '2001-03-06'),
+(4, "John", "Snow", "youknownothing@123.com", "Masculino", 100000, "Winterfell", '1990-03-06'),
+(5, "Hodor", "", "thedoor@hold.com", "Masculino", 0, "Westeros", '1500-03-06');
+
+
+
+
