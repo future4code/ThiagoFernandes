@@ -1,0 +1,80 @@
+1.1) 
+SELECT nome from funcionarios
+ORDER BY salario DESC
+LIMIT 5;
+
+1.2)
+SELECT AVG(salario) "Média Salarial", local_de_trabalho from funcionarios
+GROUP BY local_de_trabalho;
+
+1.3)
+SELECT COUNT(*) "Quantidade", genero from funcionarios
+GROUP BY genero;
+
+1.4)
+SELECT nome, data_contratacao from funcionarios
+ORDER BY data_contratacao ASC
+LIMIT 10;
+
+2.1)
+SELECT primeiro_nome, conta_corrente from correntistas
+where conta_corrente > 3000
+ORDER BY conta_corrente DESC
+LIMIT 100;
+
+2.2)
+SELECT count(*) "Mulheres 32+" from correntistas
+where (year(CURDATE()) - year(aniversario)) > 32; 
+
+2.3)
+SELECT sum(conta_corrente) "Soma" from correntistas
+WHERE pais="Peru" and (year(CURDATE()) - year(aniversario)) > 25;
+
+2.4)
+
+2.5)
+
+2.6)
+SELECT AVG((year(CURDATE()) - year(aniversario))) "Média de idade", pais from correntistas
+group by pais;
+
+2.7)
+
+2.8)
+SELECT AVG(conta_corrente) "Média", lower(pais) from correntistas
+group BY pais;
+
+2.9)
+
+
+ESCRITA
+
+----- add mais correntistas ------
+
+INSERT INTO correntistas (id, primeiro_nome, ultimo_nome, email, genero, conta_corrente, pais, aniversario)
+VALUES (6, "John", "Array", "random@a.com.br", "Masculino", 10000, "Brasil", '1999-05-12'),
+(7, "Fred", "Flintstone", "yabadaba@hoo", "Masculino", 0, "Bedrock", '1200-01-02'),
+(8, "Johnny", "Bravo", "hophop@a.com.br", "Masculino", 958700, "Cartoon", '1998-05-07'),
+(9, "Dexter", "?", "dexter@lab.com.br", "Masculino", 500, "Cartoon", '1995-12-12'),
+(10, "DeeDee", "?", "deedee@lab.com.br", "Feminino", 100, "Cartoon", '1999-01-01');
+
+------/add mais correntistas ------
+
+1) 
+ALTER TABLE correntistas
+ADD estado_civil varchar(50) NOT NULL DEFAULT "Solteiro(a)";
+
+2) 
+UPDATE correntistas
+SET estado_civil="Casado(a)"
+WHERE (year(CURDATE()) - year(aniversario) > 30); 
+
+3)
+ALTER TABLE correntistas
+ADD numero_da_sorte int NOT NULL DEFAULT 0;
+
+4)
+UPDATE correntistas
+SET numero_da_sorte = floor( 1 + RAND() * 1000 )
+WHERE numero_da_sorte = NULL;
+
