@@ -30,6 +30,7 @@ export class UsersDatabase implements UserGateway {
             returnedUser.email,
             returnedUser.password,
             returnedUser.photo,
+            returnedUser.birthdate,
         )
 
     }
@@ -50,7 +51,8 @@ export class UsersDatabase implements UserGateway {
             returnedUser.name,
             returnedUser.email,
             returnedUser.password,
-            returnedUser.photo
+            returnedUser.photo,
+            returnedUser.birthdade,
         )
 
     }
@@ -61,7 +63,14 @@ export class UsersDatabase implements UserGateway {
         const usersFromDb = await query
         return usersFromDb[0].map(
             (user: any) =>
-                new User(user.id, user.name, user.email, user.password, user.photo)
+                new User(
+                    user.id, 
+                    user.name, 
+                    user.email, 
+                    user.password,
+                    user.photo,
+                    user.birthdade,
+                    )
         )
 
     }
@@ -74,7 +83,8 @@ export class UsersDatabase implements UserGateway {
             name: user.getName(),
             email: user.getEmail(),
             password: user.getPassword(),
-            photo: user.getPhoto()
+            photo: user.getPhoto(),
+            birthdate: user.getbBirthdate(),
         })
         .into("user_astromatch")
 

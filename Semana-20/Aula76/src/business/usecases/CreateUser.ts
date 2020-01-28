@@ -25,6 +25,7 @@ export class CreateUser {
             input.email,
             encryptedPassword,
             input.photo,
+            input.birthdate,
         )
 
         try {
@@ -48,6 +49,7 @@ export interface CreateUserUseCaseInput {
     email: string,
     password: string
     photo: string,
+    birthdate: Date,
 
 }
 

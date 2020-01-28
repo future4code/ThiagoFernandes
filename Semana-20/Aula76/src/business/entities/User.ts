@@ -5,6 +5,7 @@ export class User {
         private password: string,
         private email: string,
         private photo: string,
+        private birthdate: Date,
     ) { }
 
     public getId() {
@@ -25,6 +26,10 @@ export class User {
 
     public getPhoto() {
         return this.photo;
+    }
+
+    public getbBirthdate() {
+        return this.birthdate;
     }
     
 }
