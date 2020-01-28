@@ -1,26 +1,30 @@
 export class User {
-
     constructor(
         private id: string,
-        private username: string,
+        private name: string,
+        private password: string,
         private email: string,
-        private password: string
-    ){}
+        private photo: string,
+    ) { }
 
-    public getId(): string{
-        return this.id
+    public getId() {
+        return this.id;
     }
 
-    public getUserName(): string {
-        return this.username
-    }
-
-    public getUserEmail(): string{
-        return this.email
+    public getName() {
+        return this.name;
     }
 
     public getPassword() {
-        return this.password
+        return this.password;
+    }
+
+    public getEmail() {
+        return this.email;
+    }
+
+    public getPhoto() {
+        return this.photo;
     }
     
-} 
+}
