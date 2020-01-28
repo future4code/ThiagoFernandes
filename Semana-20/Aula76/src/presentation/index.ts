@@ -1,9 +1,9 @@
+import { BcryptService } from './../services/cryptography/BcryptService';
 import { CreateUser } from './../business/usecases/CreateUser'
 import { UsersDatabase } from './../data/UsersDatabase'
 import express, {Request, Response} from 'express'
 import { V4IdGenerator } from '../services/auth/v4IdGenerator'
 import { JwtAuthService } from './../services/auth/jwtAuthService'
-import { BcryptService } from '../services/cryptography/bcryptService'
 
 
 const app = express()
@@ -23,6 +23,7 @@ app.post("/signup", async (req: Request, res: Response) => {
             email: req.body.email,
             password: req.body.password,
             photo: req.body.photo,
+            birthdate: req.body.birthdate
         })
         res.status(200).send(result)
     } catch (err) {
