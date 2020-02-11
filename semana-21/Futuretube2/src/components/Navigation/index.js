@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Wrapper, Lista, ListaItem } from './indexStyled';
-
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
-
 import { AuthUserContext } from '../Session';
+
 
 const Navigation = () => (
   <Wrapper>
@@ -35,10 +34,6 @@ const NavigationAuth = () => (
 
       <ListaItem>
         <Link to={ROUTES.ACCOUNT}>Account</Link>
-      </ListaItem>
-
-      <ListaItem>
-        <Link to={ROUTES.ADMIN}>Admin</Link>
       </ListaItem>
 
       <ListaItem>
