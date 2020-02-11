@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 
 export const Wrapper = styled.div`
   width:100%;
@@ -9,20 +7,25 @@ export const Wrapper = styled.div`
   padding: 0 0 0 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
-export const TxtField = styled(TextField)`
-    margin: 15px;
-    padding: 15px;
+export const WelcomeMsg = styled.h1`
+    margin-bottom: 20px;
 `
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    height: 120px;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
 `
-export const Btn = styled(Button)`
+export const TxtField = styled.div`
     margin: 10px;
-    background: red;
-    color: pink;
+    display: flex;
+    justify-content: center;
+`
+export const Btn = styled.div`
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 `

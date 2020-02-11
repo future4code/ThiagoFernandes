@@ -3,14 +3,16 @@ import 'firebase/auth';
 import 'firebase/database';
 
 
-const config = {
-    apiKey: "AIzaSyADvKbkR3Pxp-LGrQGonY-R7XpLJ3eFrwE",
-    authDomain: "futuretube-4272d.firebaseapp.com",
-    databaseURL: "https://futuretube-4272d.firebaseio.com",
-    projectId: "futuretube-4272d",
-    storageBucket: "futuretube-4272d.appspot.com",
-    messagingSenderId: "145349650200",
-};
+// const config = {
+//     apiKey: "AIzaSyADvKbkR3Pxp-LGrQGonY-R7XpLJ3eFrwE",
+//     authDomain: "futuretube-4272d.firebaseapp.com",
+//     databaseURL: "https://futuretube-4272d.firebaseio.com",
+//     projectId: "futuretube-4272d",
+//     storageBucket: "futuretube-4272d.appspot.com",
+//     messagingSenderId: "145349650200",
+// };
+
+//TODO: enviar isso aqui por process.env, né?
 
 class Firebase {
     constructor() {

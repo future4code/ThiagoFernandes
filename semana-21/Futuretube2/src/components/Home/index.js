@@ -1,12 +1,15 @@
 import React from 'react';
 import { withAuthorization } from '../Session';
+import { Wrapper, VideosWrapper, HomePageWrapper } from './styled'
 
 const HomePage = () => (
-
-    <div>
-        <h1>Usarios logados blabla</h1>
-        <p>Videos para usuarios logados.</p>
-    </div>
+    <HomePageWrapper>
+        <Wrapper>
+            <h1>Vídeos em destaque</h1>
+            <p>~em construção~</p>
+        </Wrapper>
+        <VideosWrapper>Criar e inserir componentes de video aqui</VideosWrapper>
+    </HomePageWrapper>
 
 );
 

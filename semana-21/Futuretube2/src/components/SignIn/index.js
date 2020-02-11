@@ -5,17 +5,20 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import { Wrapper, TxtField, Form, Btn } from './styled'
+import { Wrapper, Form, WelcomeMsg, TxtField, Btn } from './styled'
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 
 
 const SignInPage = () => (
 
   <Wrapper>
-    <h2>Welcome to FutureTube</h2>
+    <WelcomeMsg>Welcome to FutureTube</WelcomeMsg>
     <SignInForm />
 
-      <PasswordForgetLink />
-      <SignUpLink />
+    <PasswordForgetLink />
+    <SignUpLink />
 
   </Wrapper>
 
@@ -62,28 +65,34 @@ class SignInFormBase extends Component {
 
       <Form onSubmit={this.onSubmit}>
 
-        <TxtField
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
+        <TxtField>
+          <TextField
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
+          />
+        </TxtField>
 
-        <TxtField
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
+        <TxtField>
+          <TextField
+            name="password"
+            value={password}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />
+        </TxtField>
 
-        <Btn
-          disabled={isInvalid}
-          type="submit"
-          variant="contained"
-          color="primary">
-          Sign In
+        <Btn>
+          <Button
+            disabled={isInvalid}
+            type="submit"
+            variant="contained"
+            color="primary">
+            Sign In
+        </Button>
         </Btn>
 
         {error && <p>{error.message}</p>}
