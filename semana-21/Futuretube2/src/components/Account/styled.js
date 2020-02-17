@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid red;
 `
 export const UserName = styled.span`
     color: darkred;

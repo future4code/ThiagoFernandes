@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import { PasswordLostTxt, ResetPassForm } from './styled'
+import { PasswordLostTxt, ResetPassForm, Wrapper } from './styled'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 const PasswordForgetPage = () => (
-  <div>
-    <h1>PasswordForget</h1>
+  <Wrapper>
+    <h2>Forgot your password?</h2>
+    <p>Insert your e-mail and we'll send you a reset password link!</p>
     <PasswordForgetForm />
-  </div>
+  </Wrapper>
 );
 
 const INITIAL_STATE = {
@@ -62,7 +63,7 @@ class PasswordForgetFormBase extends Component {
         />
 
         <Button disabled={isInvalid} type="submit">
-          Reset My Password
+          Reset my password!
         </Button>
 
         {error && <p>{error.message}</p>}

@@ -8,3 +8,10 @@ export const PasswordLostTxt = styled.p`
 export const ResetPassForm = styled.form`
     margin: 20px 0 20px 0;
 `
+export const Wrapper = styled.div`
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`

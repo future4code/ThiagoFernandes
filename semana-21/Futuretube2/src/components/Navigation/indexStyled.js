@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   padding: 0 0 0 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
 export const Lista = styled.ul`

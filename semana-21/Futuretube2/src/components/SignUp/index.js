@@ -2,16 +2,18 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import { Txt } from './styled'
+import { Txt, Wrapper, SignUpArea, TxtField } from './styled'
 
 const SignUpPage = () => (
-    <div>
-        <h1>SignUp</h1>
+    <Wrapper>
+        <h1>Futuretube 2.0</h1>
+        <p>Create the future. Join Futuretube.</p>
         <SignUpForm />
-    </div>
+    </Wrapper>
 );
 
 const INITIAL_STATE = {
@@ -74,42 +76,50 @@ class SignUpFormBase extends Component {
 
         return (
 
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="username"
-                    value={username}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Full Name"
-                />
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm Password"
-                />
+            <SignUpArea onSubmit={this.onSubmit}>
+                <TxtField>
+                    <TextField
+                        name="username"
+                        value={username}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Full Name"
+                    />
+                </TxtField>
+                <TxtField>
+                    <TextField
+                        name="email"
+                        value={email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Email Address"
+                    />
+                </TxtField>
+                <TxtField>
+                    <TextField
+                        name="passwordOne"
+                        value={passwordOne}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                    />
+                </TxtField>
+                <TxtField>
+                    <TextField
+                        name="passwordTwo"
+                        value={passwordTwo}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Confirm Password"
+                    />
+                </TxtField>
 
-                <button disabled={isInvalid} type="submit">
+                <Button disabled={isInvalid} type="submit">
                     Sign Up
-                    </button>
+                    </Button>
 
                 {error && <p>{error.message}</p>}
-            </form>
+            </SignUpArea>
         );
 
     }
