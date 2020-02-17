@@ -1,18 +1,18 @@
 function firstRecurringChar(string) {
+  const stringToCheck = string.toLowerCase()
+  const charHash = []
 
-    const charHash = {}
+  for (i = 0; i < stringToCheck.length; i++) {
 
-    for (const char of string) {
-
-      if (charHash[char] === true) {
-        return char
-      } else {
-        charHash[char] = true
-      }
-      
-
+    if (charHash.indexOf(stringToCheck[i]) !== -1) {
+      return stringToCheck[i];
+    }
+    else {
+      charHash.push(stringToCheck[i]);
     }
 
-    return null
+  }
+
+  return null;
 
 }
