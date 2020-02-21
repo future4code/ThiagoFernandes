@@ -1,0 +1,10 @@
+Ex1 - O(n), onde n = comprimento do "input".
+
+Ex2 - O(n), onde n = tamanho da "comparision".
+
+Ex3 - 
+
+Ex4 - O(n), onde n = o array.
+// Tem um loop dentro de um for aqui, como fica nesse caso? Complexidade x complexidade?
+
+Ex5 - 
